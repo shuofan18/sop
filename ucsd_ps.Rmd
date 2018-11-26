@@ -1,18 +1,18 @@
 ---
 title: Statement of Purpose
-author: Shuofan Zhang (Economics Department)
+author: Shuofan Zhang, Economics Department
 bibliography: reference.bib
-output: pdf_document
+output:
+  pdf_document:
+    keep_tex: true
+    latex_engine: xelatex
+    template: default.tex
 fontsize: 12pt
 geometry: margin = 1in
 header-includes:
-    - \usepackage{setspace}\onehalfspacing
+    - \usepackage{setspace}\singlespacing
+mainfont: Times New Roman
 ---
-
-<!-- set font to Times New Roman font
-change title format
-add space between footnotes and text
--->
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
