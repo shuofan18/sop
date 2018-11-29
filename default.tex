@@ -136,48 +136,21 @@ $endif$
 \let\rmarkdownfootnote\footnote%
 \def\footnote{\protect\rmarkdownfootnote}
 
-$if(compact-title)$
-%%% Change title format to be more compact
+%% here
 \usepackage{titling}
+\setlength{\droptitle}{-6em}
+\title{$title$}
+\pretitle{\begin{center}\LARGE}
+%\posttitle{\par\end{center}\vspace{-6em}}
 
-% Create subtitle command for use in maketitle
-\newcommand{\subtitle}[1]{
-  \posttitle{
-    \begin{center}\large#1\end{center}
-    }
-}
+\author{$for(author)$$author$$sep$ \\ $endfor$}
+\preauthor{\begin{center}
+\large \lineskip 0.5em%
+\begin{tabular}[t]{c}}
+\postauthor{\end{tabular}\par\end{center}\vspace{-5em}}
 
-\setlength{\droptitle}{-2em}
-$endif$
+%% here
 
-$if(title)$
-  \title{$title$}
-  $if(compact-title)$
-  \pretitle{\vspace{\droptitle}\centering\huge}
-  \posttitle{\par}
-  $endif$
-$else$
-  \title{}
-  $if(compact-title)$
-  \pretitle{\vspace{\droptitle}}
-  \posttitle{}
-  $endif$
-$endif$
-$if(subtitle)$
-\subtitle{$subtitle$}
-$endif$
-$if(author)$
-  \author{$for(author)$$author$$sep$ \\ $endfor$}
-  $if(compact-title)$
-  \preauthor{\centering\large\emph}
-  \postauthor{\par}
-  $endif$
-$else$
-  \author{}
-  $if(compact-title)$
-  \preauthor{}\postauthor{}
-  $endif$
-$endif$
 $if(date)$
   $if(compact-title)$
   \predate{\centering\large\emph}
