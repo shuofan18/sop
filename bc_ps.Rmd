@@ -1,0 +1,33 @@
+---
+title: Personal Statement
+author: Shuofan Zhang
+bibliography: reference.bib
+output:
+  pdf_document:
+    keep_tex: true
+    latex_engine: xelatex
+    template: default.tex
+fontsize: 12pt
+geometry: margin = 1in
+header-includes:
+    - \usepackage{setspace}\onehalfspacing
+mainfont: Times New Roman
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+words
+
+<!-- Footnotes --> 
+[^1]: The Econometric Game is hosted by the University of Amsterdam. See <http://econometricgame.nl/>
+
+
+
+# References
+
+
+
+
+
